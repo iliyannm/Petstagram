@@ -1,5 +1,4 @@
-from django.contrib.auth import views as auth_views, authenticate, login
-from django.shortcuts import redirect
+from django.contrib.auth import views as auth_views
 from django.urls import reverse_lazy
 from django.views import generic as views
 
@@ -64,3 +63,7 @@ class ProfileDetailsView(views.DetailView):
         })
 
         return context
+
+
+class UserLogoutView(auth_views.LogoutView):
+    pass
